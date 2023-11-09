@@ -1068,8 +1068,7 @@ Guarantees: Staff-Snap exits.
   (e.g. a `.txt` file)
 * **Graphical User Interface (GUI)**: A type of user interface that allows users to interact with software through
   graphical icons and visual indicators.
-* **UI**: 
-*
+* **User interface (UI)**: The space where the interactions between the users can Staff-Snap occur.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -1135,22 +1134,6 @@ testers are expected to do more *exploratory* testing.
     4. Other incorrect edit commands to try: `edit`, `edit x n/Jane Doe`, `edit e/email` (where x is larger than the list size)<br>
        Expected: Similar to previous.
 
-### Deleting an applicant
-
-1. Deleting an applicant while all applicants are being shown
-
-    1. Prerequisites: List all applicants using the `list` command. Multiple applicants in the list.
-
-    2. Test case: `delete 1`<br>
-       Expected: First applicant is deleted from the list. Details of the deleted applicant shown in the response area.
-       Applicant area shows the updated list of applicants.
-
-    3. Test case: `delete 0`<br>
-       Expected: No applicant is deleted. Error details shown in the response area. Applicant list in applicant area remains the same.
-
-    4. Other incorrect delete commands to try: `delete`, `delete x`, `delete a` (where x is larger than the list size)<br>
-       Expected: Similar to previous.
-
 ### Editing an applicant's status
 
 1. Editing an applicant's status while all applicants are being shown
@@ -1165,6 +1148,22 @@ testers are expected to do more *exploratory* testing.
        Expected: No applicant's status is edited. Error details shown in the response area. Applicant list in applicant area remains the same.
 
     4. Other incorrect edit status commands to try: `status`, `status x s/o`, `status 1 s/` (where x is larger than the list size)<br>
+       Expected: Similar to previous.
+
+### Deleting an applicant
+
+1. Deleting an applicant while all applicants are being shown
+
+    1. Prerequisites: List all applicants using the `list` command. Multiple applicants in the list.
+
+    2. Test case: `delete 1`<br>
+       Expected: First applicant is deleted from the list. Details of the deleted applicant shown in the response area.
+       Applicant area shows the updated list of applicants.
+
+    3. Test case: `delete 0`<br>
+       Expected: No applicant is deleted. Error details shown in the response area. Applicant list in applicant area remains the same.
+
+    4. Other incorrect delete commands to try: `delete`, `delete x`, `delete a` (where x is larger than the list size)<br>
        Expected: Similar to previous.
 
 ### Adding an interview to an applicant
@@ -1246,3 +1245,18 @@ testers are expected to do more *exploratory* testing.
 
     4. Other incorrect filter commands to try: `filter`, `filter n/`<br>
        Expected: Similar to previous.
+
+### Viewing help
+
+1. Opening a new browser tab when user types in the `help` command.
+
+   1. Prerequisites: User should be connected to the Internet.
+
+   2. Test case: `help` <br>
+   Expected: A new browser tab opens that shows the web version of the Staff-Snap user guide. List of basic commands 
+   shown in response area. 
+   
+   3. Test case: `help asdfghjkl` <br>
+   Expected: New browser tab should still be opened that shows the web version of the Staff-Snap user guide. Response area
+   shows a list of basic commands.
+
