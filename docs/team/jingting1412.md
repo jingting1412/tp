@@ -45,7 +45,6 @@ Given below are my contributions to the project.
 
 * **Code contributed**: [RepoSense link](https://nus-cs2103-ay2324s1.github.io/tp-dashboard/?search=jingting1412&breakdown=true)
 
-<div style="page-break-after: always;"></div>
 
 * **Project management**:
   * Completed tasks for each milestone.
